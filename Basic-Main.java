@@ -36,7 +36,7 @@ public class Main {
 
 		@Override
 		public void keyPressed(KeyEvent e) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			Main.e = e;
 			switch (e.getKeyCode()) {
 			case KeyEvent.VK_UP:
@@ -58,7 +58,7 @@ public class Main {
 
 		@Override
 		public void keyReleased(KeyEvent e) {
-			// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
+			// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
 			switch (e.getKeyCode()) {
 			case KeyEvent.VK_UP:
 				keyinfo[0] = false;
@@ -83,7 +83,8 @@ public class Main {
 		MyShip myship;
 		Enemy01 enemy;
 		BulletParent01 bulletP;
-		static Bullet01[] bullet = new Bullet01[5];
+		int bull = 300;
+		static Bullet01[] bullet = new Bullet01[300];
 
 		public Task() {
 			myship = new MyShip();
@@ -104,7 +105,7 @@ public class Main {
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
-					// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸ catch ãƒ–ãƒ­ãƒƒã‚¯
+					// TODO ©“®¶¬‚³‚ê‚½ catch ƒuƒƒbƒN
 					e.printStackTrace();
 				}
 			}
@@ -115,7 +116,7 @@ public class Main {
 			g.fillRect(0, 0, window.getWidth(), window.getHeight());
 			myship.draw(g);
 			enemy.draw(g);
-			for(int i=0;i<5;i++){
+			for(int i=0;i<bull;i++){
 				if(bullet[i].exist == true){
 					bullet[i].draw(g);
 				}
@@ -140,7 +141,7 @@ public class Main {
 			myship.step();
 			enemy.step();
 			bulletP.step();
-			for(int i=0;i<5;i++){
+			for(int i=0;i<bull;i++){
 				if(bullet[i].exist == true){
 					bullet[i].step();
 				}

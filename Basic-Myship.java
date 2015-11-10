@@ -27,10 +27,10 @@ public class MyShip {
 
 	public void draw(Graphics2D g) {
 		g.setColor(Color.WHITE);
-		int r = this.r +10;
+		int r = this.r +5;
 		g.fillOval((int)x-r, (int)y-r, r * 2, r * 2);
 		g.setColor(Color.RED);
-		r -= 10;
+		r -= 7;
 		g.fillOval((int)x-r, (int)y-r, r * 2, r * 2);
 	}
 	

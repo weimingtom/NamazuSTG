@@ -46,7 +46,7 @@ public class Bullet01 {
 	}
 	public void draw(Graphics2D g) {
 		g.setColor(Color.YELLOW);
-		int r = this.r;
+		int r = this.r+3;
 		g.fillOval((int)x-r, (int)y-r, r * 2, r * 2);
 	}
 

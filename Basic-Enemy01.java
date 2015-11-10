@@ -14,7 +14,7 @@ public class Enemy01 {
 
 	public Enemy01() {
 		x = Main.window.getWidth() / 2;
-		y = Main.window.getHeight() / 5;
+		y = Main.window.getHeight() *2/ 5;
 		angle = 90;
 		speed = 4;
 	}
@@ -37,7 +37,7 @@ public class Enemy01 {
 			y = 0;
 		}
 		circle.setFrame(x-r, y-r, r * 2, r * 2);
-		angle += 4;
+		angle += 3;
 	}
 
 	public void draw(Graphics2D g) {
